@@ -1,0 +1,196 @@
+:root {
+  --desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  /* Gradient */
+  /* Background gradient: */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  /* Text */
+  --vdark-blue-g: hsl(237, 12%, 33%);
+  --dark-blue-g: hsl(240, 6%, 50%);
+  /* Dividers */
+  --light-blue-g: hsl(240, 5%, 91%);
+}
+
+*, *::before, *::after {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.row img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--soft-violet)), to(var(--soft-blue)));
+  background: linear-gradient(to bottom, var(--soft-violet), var(--soft-blue));
+  height: 96vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.container .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+}
+
+.container .card .row {
+  position: relative;
+}
+
+.container .card .row img:nth-child(1) {
+  position: absolute;
+  left: -20%;
+  top: 45%;
+  z-index: 9;
+}
+
+.container .card .row img:nth-child(2) {
+  top: 20%;
+  left: -8%;
+  position: absolute;
+  -webkit-clip-path: inset(0px 0px 0px 40px);
+          clip-path: inset(0px 0px 0px 40px);
+}
+
+.container .card .row img:nth-child(3) {
+  left: -8%;
+  position: relative;
+}
+
+.container .accordion {
+  width: 50%;
+  padding: 2.5rem 8rem;
+}
+
+.container .accordion__main {
+  font-size: 12px;
+}
+
+.container .accordion__main .question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: justify;
+}
+
+.container .accordion__sub .question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid var(--light-blue-g);
+  cursor: pointer;
+}
+
+.container .accordion__sub .question h4:hover {
+  color: var(--soft-red);
+}
+
+.container .accordion__sub .question button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.container .accordion__sub .answer {
+  display: none;
+}
+
+.container .accordion__sub .pad {
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 35% !important;
+    padding: 3rem 2.5rem !important;
+  }
+  .row > img {
+    max-width: 60%;
+  }
+  .row {
+    position: absolute !important;
+    top: 12% !important;
+    left: 35% !important;
+  }
+  .row img:nth-child(1) {
+    position: absolute;
+    left: -2% !important;
+    top: 40% !important;
+    z-index: 9;
+    max-width: 20%;
+  }
+  .row img:nth-child(2) {
+    top: 7% !important;
+    left: 0%;
+    -webkit-clip-path: none !important;
+            clip-path: none !important;
+  }
+  .accordion {
+    width: 100% !important;
+    padding: 0rem !important;
+    text-align: center;
+  }
+  .accordion__main {
+    font-size: 9px !important;
+  }
+  .accordion h1 {
+    padding-top: 6rem !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .accordion__main {
+    font-size: 8px !important;
+  }
+  .accordion h1 {
+    padding-top: 3rem !important;
+  }
+  .card {
+    width: 50% !important;
+    padding: 3rem 2rem !important;
+  }
+  .row {
+    position: absolute !important;
+    top: 16% !important;
+    left: 35% !important;
+  }
+}
+/*# sourceMappingURL=design.css.map */
